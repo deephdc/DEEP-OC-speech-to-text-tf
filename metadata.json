@@ -1,0 +1,40 @@
+{
+    "title": "DEEP OC Speech to Text (Tensorflow)",
+    "summary": "A model to train an image classifier on your data.",
+    "description": [
+        "The deep learning revolution has brought significant advances in a number of fields [1], primarily linked to",
+        "image and speech recognition."\n
+
+        "This Docker container contains the tools to train a speech to text tool on your personal dataset. It is a highly",
+        "customizable tool  that let's you choose between tens of different [top performing architectures](https://github.com/keras-team/keras-applications)",
+        "and training parameters.\n",
+
+    ],
+    "keywords": [
+        "models", "library/tensorflow", "library/keras", "docker"
+    ],
+    "license": "Apache 2.0",
+    "date_creation": "2019-01-01",
+    "sources": {
+		"dockerfile_repo": "https://github.com/deephdc/DEEP-OC-speech-to-text-tf",
+		"docker_registry_repo": "deephdc/deep-oc-speech-to-text-tf",
+		"code": "https://github.com/deephdc/speech-to-text-tf"
+	},
+    "continuous_integration": {
+        "build_status_badge": "https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-speech-to-text-tf/master",
+        "build_status_url": "https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-speech-to-text-tf/job/master"
+    },
+    "tosca": [
+        {
+            "title": "Mesos (CPU)",
+            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-speech-to-text-tf-mesos-cpu.yml",
+            "inputs": [
+                "rclone_conf",
+                "rclone_url",
+                "rclone_vendor",
+                "rclone_user",
+                "rclone_pass"
+            ]
+        }
+    ]
+}
