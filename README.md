@@ -56,7 +56,7 @@ Docker container locally on your machine. You can inspect and modify the
 mode.
 
 
-## Connect to the API
+## Connect to the API 
 
 Once the container is up and running, browse to `http://localhost:5000` to get
 the [OpenAPI (Swagger)](https://www.openapis.org/) documentation page. If you are
