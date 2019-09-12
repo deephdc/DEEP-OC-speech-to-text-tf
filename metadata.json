@@ -17,7 +17,7 @@
     "sources": {
 		"dockerfile_repo": "https://github.com/deephdc/DEEP-OC-speech-to-text-tf",
 		"docker_registry_repo": "deephdc/deep-oc-speech-to-text-tf",
-		"code": "https://github.com/deephdc/mods"
+		"code": "https://github.com/deephdc/deep-oc-speech-to-text-tf"
 	},
     "continuous_integration": {
         "build_status_badge": "https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-speech-to-text-tf/master",
@@ -26,7 +26,7 @@
     "tosca": [
         {
             "title": "Mesos (CPU)",
-            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-plants-classification-tf-mesos-cpu.yml",
+            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-speech-to-text-tf-mesos-cpu.yml",
             "inputs": [
                 "rclone_conf",
                 "rclone_url",
