@@ -1,23 +1,33 @@
 {
-    "title": "DEEP OC Speech to Text",
-    "summary": "Speech to text using Tensorflow",
+    "title": "Speech keywords classifier",
+    "summary": "Train a speech classifier to classify audio files between different keywords.",
     "description": [
-                "This is a plug-and-play tool to train and evaluate a speech to text tool using deep neural networks. The network architecture is based in one of the tutorials provided by Tensorflow[1].",
-                "The architecture used in this tutorial is based on some described in the paper Convolutional Neural Networks for Small-footprint Keyword Spotting[1]. ",
-                "There are lots of different approaches to building neural network models to work with audio including recurrent networks or dilated convolutions. This model is based on the kind of convolutional network that will feel very familiar to anyone who's worked with image recognition. That may seem surprising at first though, since audio is inherently a one-dimensional continuous signal across time, not a 2D spatial problem. We define a window of time we believe our spoken words should fit into, and converting the audio signal in that window into an image. This is done by grouping the incoming audio samples into short segments, just a few milliseconds long, and calculating the strength of the frequencies across a set of bands. Each set of frequency strengths from a segment is treated as a vector of numbers, and those vectors are arranged in time order to form a two-dimensional array. This array of values can then be treated like a single-channel image and is known as a spectrogram. These spectograms will be the input for the training.",
-                "[1]: https://www.tensorflow.org/tutorials/sequences/audio_recognition",
-                "[2]: https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43969.pdf"
+                "This is a plug-and-play tool to train and evaluate a speech-to-text tool using deep neural networks. The network architecture is based on one of the tutorials provided by Tensorflow [1].",
+                "The architecture used in this tutorial is based on some described in the paper Convolutional Neural Networks for Small-footprint Keyword Spotting [2].\n",
+
+                "There are lots of different approaches to building neural network models to work with audio including recurrent networks or dilated convolutions. This model is based on the kind of convolutional network that will feel very familiar to anyone who's worked with image recognition. That may seem surprising at first though, since audio is inherently a one-dimensional continuous signal across time, not a 2D spatial problem. We define a window of time we believe our spoken words should fit into, and converting the audio signal in that window into an image. This is done by grouping the incoming audio samples into short segments, just a few milliseconds long, and calculating the strength of the frequencies across a set of bands. Each set of frequency strengths from a segment is treated as a vector of numbers, and those vectors are arranged in time order to form a two-dimensional array. This array of values can then be treated like a single-channel image and is known as a spectrogram. These spectrograms will be the input for the training.",
+
+                "The container does not come with any pretrained model, it has to be trained first on a dataset to be used for prediction.\n",
+
+                "The PREDICT method expects an audio files as input (or the url of an audio file) and will return a JSON with ",
+        "the top 5 predictions.\n",
+
+                "<img class='fit', src='https://raw.githubusercontent.com/deephdc/DEEP-OC-speech-to-text-tf/master/images/speech-to-text.png'/>\n",
+
+                "**References**\n",
+                "[1]: https://www.tensorflow.org/tutorials/sequences/audio_recognition \n",
+                "[2]: https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43969.pdf \n"
 	],
     "keywords": [
-        "services",
-        "docker"
+        "services", "library/tensorflow", "docker", "deep learning"
     ],
     "license": "Apache 2.0",
     "date_creation": "2019-07-31",
+    "cite_url": "https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43969.pdf",
     "sources": {
 		"dockerfile_repo": "https://github.com/deephdc/DEEP-OC-speech-to-text-tf",
 		"docker_registry_repo": "deephdc/deep-oc-speech-to-text-tf",
-		"code": "https://github.com/deephdc/mods"
+		"code": "https://github.com/deephdc/speech-to-text-tf"
 	},
     "continuous_integration": {
         "build_status_badge": "https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-speech-to-text-tf/master",
@@ -26,7 +36,7 @@
     "tosca": [
         {
             "title": "Mesos (CPU)",
-            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-plants-classification-tf-mesos-cpu.yml",
+            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-mesos-webdav.yml",
             "inputs": [
                 "rclone_conf",
                 "rclone_url",
