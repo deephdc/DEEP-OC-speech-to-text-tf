@@ -17,7 +17,7 @@ To run the Docker container directly from Docker Hub and start using the API
 simply run the following command:
 
 ```bash
-$ docker run -ti -p 5000:5000 -p 6006:6006  -p 8888:8888 deephdc/deep-oc-speech-to-text-tf
+$ docker run -ti -p 5000:5000 -p 6006:6006 -p 8888:8888 deephdc/deep-oc-speech-to-text-tf
 ```
 
 This command will pull the Docker container from the Docker Hub
@@ -46,7 +46,7 @@ Building the container:
 3. Run the container:
 
     ```bash
-    $ docker run -ti -p 5000:5000 -p 6006:6006  -p 8888:8888 deephdc/deep-oc-speech-to-text-tf
+    $ docker run -ti -p 5000:5000 -p 6006:6006 -p 8888:8888 deephdc/deep-oc-speech-to-text-tf
     ```
 
    You can also run Jupyter Lab inside the container:
@@ -65,7 +65,5 @@ mode.
 
 ## Connect to the API 
 
-Once the container is up and running, browse to `http://localhost:5000` to get
-the [OpenAPI (Swagger)](https://www.openapis.org/) documentation page. If you are
-training on your dataset, you can monitor the training progress in Tensorboard 
-connecting to `http://localhost:6006`. 
+Once the container is up and running, browse to `http://localhost:5000/ui` to get
+the [OpenAPI (Swagger)](https://www.openapis.org/) documentation page.
