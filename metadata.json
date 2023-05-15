@@ -19,7 +19,7 @@
                 "[2]: https://static.googleusercontent.com/media/research.google.com/es//pubs/archive/43969.pdf \n"
 	],
     "keywords": [
-        "tensorflow", "docker", "deep learning", "trainable", "inference", "api-v2"
+        "tensorflow", "docker", "deep learning", "trainable", "inference", "api-v2", "audio", "nlp", "general purpose"
     ],
     "license": "Apache 2.0",
     "date_creation": "2019-07-31",
