@@ -1,3 +1,8 @@
+---
+# The Repository is ARCHIVED!
+### it is moved to https://github.com/ai4os-hub/ai4os-speech-to-text-tf
+---
+
 <div align="center">
 <img src="https://marketplace.deep-hybrid-datacloud.eu/images/logo-deep.png" alt="logo" width="300"/>
 </div>
